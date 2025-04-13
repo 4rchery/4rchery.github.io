@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+        <ul class="taskbar">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Skills.html">Skills</a></li>
+                <li><a href="Experiences.html">Experience</a></li>
+            </ul>   
+        </nav>
+    </header>
+    <div class="container">
+        <h1>My Portfolio</h1>
+        <div class="profile-info">
+            <div class="profile-pic">
+                <img src="FORMALPIC.jpg">
+            </div>
+            <div class="profile-details">
+                <h2>Arch Ivan P. Viola</h2>
+                <p>2nd Year BSIT Student</p>
+                <p>Pamantasan ng Lungsod ng San Pablo</p>
+            </div>
+        </div>
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li class="skill-item">HTML</li>
+            <li class="skill-item">CSS</li>
+            <li class="skill-item">JavaScript</li>
+            <li class="skill-item">C#</li>
+            <li class="skill-item">Excel</li>
+            <li class="skill-item">SQL</li>
+            <li class="skill-item">Leadership</li>
+            <li class="skill-item">Agile Methodologies</li>
+        </ul>
+        <h2>Experience</h2>
+        <ul class="experience-list">
+            <li><strong>Software Engineer at Microsoft (2020 - Present)</strong></li>
+            <li><strong>Web Developer at IVouch (2018 - Present)</strong></li>
+            <li><strong>Freelance Web Developer (2017 - 2018)</strong></li>
+        </ul>
+        <div class="contact">
+            <a href="phsub2019@gmail.com">Contact Me</a>
+        </div>
+    </div>
+
+    <script>
+        const skillItems = document.querySelectorAll('.skill-item');
+
+        skillItems.forEach(item => {
+            item.addEventListener('click', () => {
+                alert(`You clicked on ${item.textContent}`);
+            });
+        });
+        function scrollWindow() {
+          window.scrollBy(50, 50);
+        }
+        </script>
+</body>
+</html>

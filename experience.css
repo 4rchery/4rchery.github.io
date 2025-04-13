@@ -1,0 +1,120 @@
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('background.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+        background-color: purple;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(1, 1, 1, 1);
+    }
+    .container1 {
+        max-width: 700px;
+        margin: auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(1, 1, 1, 1);
+    }
+    h2 {
+        text-align: center; 
+        background-color: white; 
+        padding: 20px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 5px rgba(1, 1, 1, 1);
+        border-radius: 10px;
+    }
+    .experience-list {
+        list-style: none;
+        padding: 0;
+    }
+    .experience-item strong
+    {
+        text-align: cen;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(1, 1, 1, 1);
+        background-color: white;
+        padding: 5px;
+    }
+    .experience-list1 strong
+    {
+        text-align: cen;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(1, 1, 1, 1);
+        background-color: white;
+        padding: 5px;
+    }
+    .experience-item {
+        margin-bottom: 50px;
+    }
+
+    .experience-item img {
+        display: block;
+        margin-top: 10px;
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 10px;
+        border: black;
+    }
+    .experience-list1 img {
+        display: block;
+        margin-top: 10px;
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 10px;
+        border:black
+    }
+
+    .contact {
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    .contact a {
+        text-decoration: none;
+        color: white;
+        background-color: #007BFF;
+        padding: 10px 20px;
+        border-radius: 8px;
+    }
+
+    .contact a:hover {
+        background-color: gray;
+    }
+    .taskbar {
+        display: flex;
+        background-color: purple; 
+        padding: 20px;
+        margin-bottom: 10px;
+        text-align: center; 
+        box-shadow: 0 2px 5px rgba(1, 1, 1, 1);
+    }
+    
+    .taskbar li {
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        text-wrap: wrap;
+        margin: 0 10px; 
+        box-shadow: 0 2px 5px rgba(1, 1, 1, 1);
+    }
+    .taskbar li:hover {
+        background-color: purple;
+        transform: translateY(-10px);
+    }
+    .taskbar a {
+        text-decoration: purple; 
+        color: #0b0a0a;
+        font-weight: 1000;
+    }

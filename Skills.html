@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="skills.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="taskbar">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Skills.html">Skills</a></li>
+        <li><a href="Experiences.html">Experience</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li class="skill-item" data-skill="html">HTML</li>
+      <li class="skill-item" data-skill="css">CSS</li>
+      <li class="skill-item" data-skill="js">JavaScript</li>
+      <li class="skill-item" data-skill="sql">SQL</li>
+    </ul>
+  </div>
+  <div class="contact">
+    <a href="Resume.docx" download="Resume.docx">Download CV</a>
+  </div>
+  <script>
+    const skillDetails = {
+      html: `
+        <strong>HTML (HyperText Markup Language):</strong><br>
+        - Structure pages with semantic tags like &lt;header&gt;, &lt;section&gt;<br>
+        - Use forms, media, and links effectively.<br>
+        - Foundation for all web content.
+      `,
+      css: `
+        <strong>CSS (Cascading Style Sheets):</strong><br>
+        - Style elements: layout, colors, spacing.<br>
+        - Use Flexbox/Grid for layout control.<br>
+        - Make responsive designs with media queries.
+      `,
+      js: `
+        <strong>JavaScript:</strong><br>
+        - Make pages interactive and dynamic.<br>
+        - Manipulate DOM, respond to events.<br>
+        - Handle data and APIs with ease.
+      `,
+      sql: `
+        <strong>SQL (Structured Query Language):</strong><br>
+        - Manage and query data in databases.<br>
+        - Use SELECT, JOIN, and more to get insights.<br>
+        - Create, update, and delete records safely.
+      `
+    };
+    const skillItems = document.querySelectorAll('.skill-item');
+    skillItems.forEach(item => {
+      item.addEventListener('click', () => {
+        document.querySelectorAll('.description-box').forEach(box => box.remove());
+
+        const skill = item.getAttribute('data-skill');
+        const descriptionHTML = skillDetails[skill] || "No description available.";
+
+        const descBox = document.createElement('div');
+        descBox.classList.add('description-box');
+        descBox.innerHTML = descriptionHTML;
+
+        item.insertAdjacentElement('afterend', descBox);
+      });
+    });
+  </script>
+</body>
+</html>

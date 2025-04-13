@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="about.css">
+  <title>My Portfolio</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="taskbar">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Skills.html">Skills</a></li>
+        <li><a href="Experiences.html">Experience</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Purple box container (assumed to have the purple background in your about.css) -->
+  <div class="container">
+    <h1>My Portfolio</h1>
+    <div class="profile-info">
+      <div class="profile-pic">
+        <div id="carousel">
+          <img id="portfolioImage" src="FORMALPIC.jpg" alt="Portfolio Image">
+        </div>
+      </div>
+      <div class="profile-details">
+        <h2>Arch Ivan P. Viola</h2>
+        <p>2nd Year BSIT Student</p>
+        <p>Pamantasan ng Lungsod ng San Pablo</p>
+        <p>
+          I am a highly skilled database analyst with a proven ability to manage and
+          interpret complex datasets. My expertise extends to the field of journalism,
+          where I excel as a lead journalist for web projects, ensuring accurate, engaging,
+          and timely content delivery. I am adept at combining my analytical and
+          journalistic skills to create impactful and data-driven narratives for online audiences.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="contact">
+      <a href="Resume.docx" download="Resume.docx">Download CV</a>
+  </div>
+
+  <script>
+      const images = ['FORMALPIC.jpg', 'me2.jpg', 'me3.jpg'];
+      let currentImageIndex = 0;
+      const imageElement = document.getElementById('portfolioImage');
+
+      function showImage(index) {
+        imageElement.style.opacity = 0;
+        setTimeout(() => {
+          imageElement.src = images[index];
+          imageElement.style.opacity = 1;
+        }, 300);
+      }
+
+      function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        showImage(currentImageIndex);
+      }
+
+      function prevImage() {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        showImage(currentImageIndex);
+      }
+      
+      setInterval(nextImage, 3000);
+      
+      document.querySelectorAll('.skill-item').forEach(item => {
+        item.addEventListener('click', () => {
+          alert(`You clicked on ${item.textContent}`);
+        });
+      });
+  </script>
+</body>
+</html>
